@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/bouldersdachurch-dev',
+	db: process.env.MONGOLAB_URI,//'mongodb://localhost/bouldersdachurch-dev',
 	app: {
 		title: 'bouldersdachurch - Development Environment'
 	},
