@@ -1,0 +1,19 @@
+<section data-ng-controller="BaptismmembershiprequestsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Baptismmembershiprequests</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="baptismmembershiprequest in baptismmembershiprequests" data-ng-href="#!/baptismmembershiprequests/{{baptismmembershiprequest._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="baptismmembershiprequest.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="baptismmembershiprequest.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="baptismmembershiprequest.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!baptismmembershiprequests.$resolved || baptismmembershiprequests.length">
+    	No Baptismmembershiprequests yet, why don't you <a href="/#!/baptismmembershiprequests/create">create one</a>?
+    </div>
+</section>

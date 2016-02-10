@@ -1,0 +1,26 @@
+<section class="container" data-ng-controller="HomeController">
+    <div class="page-header" >
+        <h1>
+            Ministries
+        </h1>
+
+        </div>
+
+    <div>
+        <div class="row">
+            <div class="col-md-4 col-sm3" data-ng-repeat="ministry in ministries">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>{{ministry.name}}</h3>
+                        <p>{{ministry.description}}</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Learn more</a> <!--<a href="/#!/products/{{product.id}}" class="btn btn-default">More Info</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
