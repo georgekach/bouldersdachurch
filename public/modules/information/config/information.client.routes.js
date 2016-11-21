@@ -20,6 +20,15 @@ angular.module('information').config(['$stateProvider',
 		state('editInformation', {
 			url: '/information/:informationId/edit',
 			templateUrl: 'modules/information/views/edit-information.client.view.html'
-		});
+		}).
+			state('viewLocalStaff',{
+				url:'/localstaff',
+				templateUrl: 'modules/information/views/list-localstaff.client.view.html'
+			}).
+			state('uploadImageForLocalStaff',{
+				url:'/upload/image',
+				templateUrl: 'modules/information/views/list-localstaff.client.view.html'
+			})
+		;
 	}
 ]);

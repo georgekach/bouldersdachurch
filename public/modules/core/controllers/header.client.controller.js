@@ -14,5 +14,17 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		$scope.$on('$stateChangeSuccess', function() {
 			$scope.isCollapsed = false;
 		});
+
+		$scope.toggleMenuButton = function(){
+			document.getElementById('nav-toggle').classList.toggle('active');
+
+		};
+
+		document.querySelector( '#nav-toggle' )
+			.addEventListener( 'click', function() {
+				this.classList.toggle( 'active' );
+			});
+
+
 	}
 ]);

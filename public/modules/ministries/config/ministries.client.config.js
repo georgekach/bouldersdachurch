@@ -4,8 +4,8 @@
 angular.module('ministries').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Ministries', 'ministries', 'dropdown', '/ministries(/create)?');
-		Menus.addSubMenuItem('topbar', 'ministries', 'List Ministries', 'ministries');
-		Menus.addSubMenuItem('topbar', 'ministries', 'New Ministry', 'ministries/create');
+		Menus.addMenuItem('top-admin', 'Ministries', 'ministries', 'dropdown', '/ministries(/create)?');
+		Menus.addSubMenuItem('top-admin', 'ministries', 'List Ministries', 'ministries');
+		Menus.addSubMenuItem('top-admin', 'ministries', 'New Ministry', 'ministries/create');
 	}
 ]);

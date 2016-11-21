@@ -6,9 +6,31 @@
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
                 <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
+                    <label class="control-label text-left col-md-2" for="name">Name / Surname</label>
+                    <div class="controls col-md-4">
                         <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label col-md-2" for="surname">Surname</label>
+                    <div class="controls col-md-4">
+                        <input type="text" data-ng-model="surname" id="surname" class="form-control" placeholder="Surname" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label text-left col-md-2" for="emailaddress">Email</label>
+                    <div class="controls col-md-4">
+                        <input type="text" data-ng-model="emailaddress" id="emailaddress" class="form-control" placeholder="Contact Email Address" required>
+                    </div>
+                    <label class="control-label text-left col-md-2" for="contactnumber">Contact Number</label>
+                    <div class="controls col-md-4">
+                        <input type="text" data-ng-model="contactnumber" id="contactnumber" class="form-control" placeholder="Contact Number" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label text-left col-md-2" for="requestdetail">Prayer Request</label>
+                    <div class="controls col-md-6">
+                        <input type="text" size="500" data-ng-model="requestdetail" id="requestdetail" class="form-control" placeholder="Prayer Request Detail" required>
                     </div>
                 </div>
                 <div class="form-group">

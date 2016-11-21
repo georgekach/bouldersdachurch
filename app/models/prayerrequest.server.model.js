@@ -19,14 +19,30 @@ var PrayerrequestSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill your request',
+		required: 'Please fill your Name',
 		trim: true
 	},
 	surname: {
 		type: String,
 		default: '',
-		required: 'Please fill your request',
+		required: 'Please fill your Surname',
 		trim: true
+	},
+	emailaddress: {
+		type: String,
+		default: '',
+		required: 'Please fill your Email Address',
+		trim: true
+	},
+	contactnumber: {
+		type: String,
+		default: '',
+		required: 'Please fill your Contact Number',
+		trim: true
+	},
+	sharewithprayerband: {
+		type: Boolean,
+		default: false
 	},
 	created: {
 		type: Date,

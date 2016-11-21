@@ -4,13 +4,31 @@
 angular.module('baptismmembershiprequests').controller('BaptismmembershiprequestsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Baptismmembershiprequests',
 	function($scope, $stateParams, $location, Authentication, Baptismmembershiprequests) {
 		$scope.authentication = Authentication;
+		$scope.requestType = '';
 
 		// Create new Baptismmembershiprequest
 		$scope.create = function() {
 			// Create new Baptismmembershiprequest object
+
+
 			var baptismmembershiprequest = new Baptismmembershiprequests ({
-				name: this.name
+				name: this.name,
+				surname: this.surname,
+				email: this.email,
+				contactnumber: this.contactnumber,
+				currentmembership: this.currentmembership
 			});
+
+			if($scope.requestType ==='baptism')
+			{
+				baptismmembershiprequest.membershiptransfer = false;
+				baptismmembershiprequest.baptismrequest = true;
+			}
+			if($scope.requestType ==='membership')
+			{
+				baptismmembershiprequest.membershiptransfer = true;
+				baptismmembershiprequest.baptismrequest = false;
+			}
 
 			// Redirect after save
 			baptismmembershiprequest.$save(function(response) {

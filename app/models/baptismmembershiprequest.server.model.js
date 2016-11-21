@@ -40,14 +40,10 @@ var BaptismmembershiprequestSchema = new Schema({
 		required: 'Please fill your current membership',
 		trim: true
 	},
-	membershiptransfer: {
-		type: Boolean,
-		default: false
-	},
-	baptismrequest: {
-		type: Boolean,
-		default: false
-
+	requesttype: {
+		type: String,
+		default: 'baptismrequest',
+		trim: true
 	},
 	created: {
 		type: Date,

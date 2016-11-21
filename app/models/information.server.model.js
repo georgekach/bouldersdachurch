@@ -35,6 +35,7 @@ var InformationSchema = new Schema({
 		default:'',
 		trim: true
 	},
+	img: { data: Buffer, contentType: String },
 	created: {
 		type: Date,
 		default: Date.now

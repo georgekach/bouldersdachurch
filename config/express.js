@@ -62,6 +62,7 @@ module.exports = function(db) {
 
 	// Set views path and view engine
 	app.set('view engine', 'server.view.html');
+	//app.set('view engine','jade');
 	app.set('views', './app/views');
 
 	// Environment dependent middleware

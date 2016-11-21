@@ -1,16 +1,16 @@
 <section data-ng-controller="HomeController">
-	<div class="jumbotron greenback text-center">
+	<div class="jumbotron landing-page-header text-center">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
 				<img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/img/brand/boulderbanner_lg.png" />
 			</div>
 		</div>
 		<br>
-		<div class="row">
+		<!--<div class="row">
 			<p class="lead">
 				Welcome to Harare Boulder SDA Church
 			</p>
-		</div>
+		</div>-->
 		<div class="row">
 			<p>
 				<a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more about us</a>
@@ -22,15 +22,35 @@
 
 	<div class="col-md-8">
 		<h2 class="footer-heading">Latest News</h2>
-		<ul>
-			<li>
-				<div class="thumbnail">
-					<img src="http://placehold.it/100x50" alt="">
+		<div class="newsdiv">
+			<ul>
+				<li>
+					<img src="http://lorempixum.com/100/100/nature/1" >
+					<h3>The Grasslands</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+				</li>
 
-				</div>
-				<p>dskgdskfjskdfsdkfjsdfjsdfkjdsk</p>
-			</li>
-		</ul>
+				<li>
+					<img src="http://lorempixum.com/100/100/nature/2" >
+					<h3>Paradise Found</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+				</li>
+
+				<li>
+					<img src="http://lorempixum.com/100/100/nature/3" >
+					<h3>Smoke On The Water</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+				</li>
+
+				<li>
+					<img src="http://lorempixum.com/100/100/nature/4" >
+					<h3>Headline</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+				</li>
+			</ul>
+		</div>
+
+
 	</div>
 	<div class="row">
 		<div class="col-md-3">
@@ -71,31 +91,10 @@
 			<p><a target="_blank" href="http://nodejs.org/">Node.js</a> is a web server. Node's website and this <a target="_blank" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">stackOverflow thread</a> offer excellent starting points to get to grasps with node.</p>
 		</div>
 	</div>
-	<div class="well">
-		<h2>MEAN.JS Documentation</h2>
-		<p>
-			Once you're familiar with the foundation technology, check out the MEAN.JS Documentation:
-			<ul>
-				<li><a target="_blank" href="http://meanjs.org/docs.html">MEAN.JS Documentation</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/generator.html">Yeoman Generator</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/modules.html">Modules</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/changelog.html">Changelog</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/community.html">Community</a>
-				</li>
-				<li><a target="_blank" href="http://blog.meanjs.org">Blog</a>
-				</li>
-			</ul>
-		</p>
-	</div>
-	<br>Enjoy &amp; Keep Us Updated,
-	<br>The MEAN.JS Team.
+
 
 	</div>
-    <footer style="background-color: whitesmoke;padding-top: 40px; color: #545454">
+<!--    <footer style="background-color: white;padding-top: 40px; color: #545454">
 
 		<div class="container">
 			<div class="col-md-3">
@@ -104,26 +103,26 @@
 				Harare, Zimbabwe</p>
 
 				<p>(916) 457-6511
-				office@saccentral.org</p>
+				office@bouldersda.org</p>
 
 				<p><strong>Sabbath Services</strong> - Saturday <br/>
-					Morning Manna – 9:00AM<br/>
-				Sabbath School – 9:30AM<br/>
-					Worship Service – 10:50AM<br/>
+					Morning Manna 9:00AM<br/>
+				Sabbath School 9:30AM<br/>
+					Worship Service  10:50AM<br/>
 					</p>
 
 			</div>
-			<div class="col-md-3 ">
+			<div class="col-md-3 dottedlist">
 				<span class="footer-heading">FOLLOW US</span>
 
 					<ul style="padding-left: 5px">
 						<li><i class="glyphicon glyphicon-facebook"></i> Facebook</li>
-						<li>Twitter</li>
+						<li><i class="fa fa-icon-twitter"></i> Twitter</li>
 						<li>Google Plus</li>
 					</ul>
 
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 dottedlist">
 				<span class="footer-heading">MEDIA RESOURCES</span>
 				<ul style="padding-left: 5px">
 					<li>Facebook</li>
@@ -131,15 +130,15 @@
 					<li>Google Plus</li>
 				</ul>
 			</div>
-			<div class="col-md-3">
+			<div  class="col-md-3 dottedlist">
 				<span class="footer-heading">ABOUT US</span>
 				<ul style="padding-left: 5px">
-					<li>We Beleive</li>
-					<li>Meet our staff</li>
-					<li>Our History</li>
+					<li ><a href="/#!/ourbeliefs"> We Beleive</a></li>
+					<li ><a href="/#!/information">Meet our staff</a></li>
+					<li >Our History</li>
 				</ul>
 				<span class="footer-heading">Guest Guide</span>
-				<ul style="padding-left: 5px">
+				<ul style="padding-left: 5px" >
 					<li>Children & Youth Guideline</li>
 					<li>Map Directions</li>
 					<li>Guest Lunches</li>
@@ -152,7 +151,7 @@
 				Harare Boulder SDA Church 2016
 			</div>
 			<div >
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav ">
 					<li><a href="/#!/">Home</a></li>
 					<li><a href="/#!/">About Us</a></li>
 					<li><a href="/#!/">News & Events</a></li>
@@ -162,5 +161,5 @@
 				</ul>
 			</div>
 		</div>
-	</footer>
+	</footer>-->
 </section>

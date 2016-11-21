@@ -1,8 +1,8 @@
 'use strict';
 
 // Information controller
-angular.module('information').controller('InformationController', ['$scope', '$stateParams', '$location', 'Authentication', 'Information',
-	function($scope, $stateParams, $location, Authentication, Information) {
+angular.module('information').controller('InformationController', ['$scope', '$stateParams', '$location', 'Authentication', 'Information','Upload',
+	function($scope, $stateParams, $location, Authentication, Information,Upload) {
 		$scope.authentication = Authentication;
 
 		// Create new Information
@@ -16,6 +16,7 @@ angular.module('information').controller('InformationController', ['$scope', '$s
 				officersposition: this.officersposition
 			});
 
+			console.log('im here');
 			// Redirect after save
 			information.$save(function(response) {
 				$location.path('information/' + response._id);
@@ -66,5 +67,39 @@ angular.module('information').controller('InformationController', ['$scope', '$s
 				informationId: $stateParams.informationId
 			});
 		};
+
+		$scope.uploadInProgress = false;
+		//File upload
+		$scope.onFileSelect = function(image) {
+			console.log('am here');
+			if (angular.isArray(image)) {
+				image = image[0];
+			}
+
+			// This is how I handle file types in client side
+			if (image.type !== 'image/png' && image.type !== 'image/jpeg') {
+				alert('Only PNG and JPEG are accepted.');
+				return;
+			}
+			console.log('am here');
+			$scope.uploadInProgress = true;
+			$scope.uploadProgress = 0;
+
+			$scope.upload = Upload.upload({
+				url: 'upload/image',
+				data: {file: image, 'username': $scope.username},
+				file: image
+			}).then(function (resp) {
+				console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+			}, function (resp) {
+				console.log('Error status: ' + resp.status);
+			}, function (evt) {
+				var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+				console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+			});
+		};
+
+
+
 	}
 ]);

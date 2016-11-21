@@ -1,8 +1,8 @@
-<section data-ng-controller="BaptismmembershiprequestsController" data-ng-init="find()">
+<section class="container" data-ng-controller="BaptismmembershiprequestsController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Baptismmembershiprequests</h1>
+        <h1>Baptism and Membership Requests</h1>
     </div>
-    <div class="list-group">
+    <!--<div class="list-group">
         <a data-ng-repeat="baptismmembershiprequest in baptismmembershiprequests" data-ng-href="#!/baptismmembershiprequests/{{baptismmembershiprequest._id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
@@ -12,7 +12,31 @@
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="baptismmembershiprequest.name"></h4>
         </a>
-    </div>
+    </div>-->
+<div>
+    <table st-table="rowCollection" class="table table-striped">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Contact Number</th>
+            <th>Request Type</th>
+            <th>Membership</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="baptismmembershiprequest in baptismmembershiprequests">
+            <td>{{baptismmembershiprequest.name}}</td>
+            <td>{{baptismmembershiprequest.surname}}</td>
+            <td>{{baptismmembershiprequest.contactnumber}}</td>
+            <td>{{baptismmembershiprequest.requesttype}}</td>
+            <td>{{baptismmembershiprequest.currentmembership}}</td>
+            <td> <a href="/#!/baptismmembershiprequests/{{baptismmembershiprequest._id}}/edit" class="btn btn-primary">Edit</a>
+        </tr>
+        </tbody>
+    </table>
+</div>
     <div class="alert alert-warning text-center" data-ng-hide="!baptismmembershiprequests.$resolved || baptismmembershiprequests.length">
     	No Baptismmembershiprequests yet, why don't you <a href="/#!/baptismmembershiprequests/create">create one</a>?
     </div>

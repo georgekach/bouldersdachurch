@@ -4,8 +4,8 @@
 angular.module('eventstimelines').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Eventstimelines', 'eventstimelines', 'dropdown', '/eventstimelines(/create)?');
-		Menus.addSubMenuItem('topbar', 'eventstimelines', 'List Eventstimelines', 'eventstimelines');
-		Menus.addSubMenuItem('topbar', 'eventstimelines', 'New Eventstimeline', 'eventstimelines/create');
+		Menus.addMenuItem('top-admin', 'Events Timeline', 'eventstimelines', 'dropdown', '/eventstimelines(/create)?');
+		Menus.addSubMenuItem('top-admin', 'eventstimelines', 'List Events', 'eventstimelines');
+		Menus.addSubMenuItem('top-admin', 'eventstimelines', 'New Event', 'eventstimelines/create');
 	}
 ]);

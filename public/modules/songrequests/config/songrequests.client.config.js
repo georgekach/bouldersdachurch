@@ -4,8 +4,8 @@
 angular.module('songrequests').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Songrequests', 'songrequests', 'dropdown', '/songrequests(/create)?');
-		Menus.addSubMenuItem('topbar', 'songrequests', 'List Songrequests', 'songrequests');
-		Menus.addSubMenuItem('topbar', 'songrequests', 'New Songrequest', 'songrequests/create');
+		Menus.addMenuItem('top-admin', 'Song Requests', 'songrequests', 'dropdown', '/songrequests(/create)?');
+		Menus.addSubMenuItem('top-admin', 'songrequests', 'List Song Requests', 'songrequests');
+		Menus.addSubMenuItem('top-admin', 'songrequests', 'New Song Request', 'songrequests/create');
 	}
 ]);

@@ -19,6 +19,7 @@ module.exports = {
 				'public/lib/angular-timeline/dist/angular-timeline.css',
 				'public/lib/angular-timeline/dist/angular-timeline-animations.css',
 				'public/lib/angular-timeline/dist/angular-timeline-bootstrap.css',
+				'public/lib/ng-mobile-menu/dist/ng-mobile-menu.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -31,7 +32,10 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/br-fullpage/dist/br-fullpage.min.js',
-				'public/lib/angular-timeline/dist/angular-timeline.js'
+				'public/lib/angular-timeline/dist/angular-timeline.js',
+				'public/lib/ng-mobile-menu/dist/ng-mobile-menu.min.js',
+				'public/lib/angular-smart-table/dist/smart-table.min.js',
+				'public/lib/ng-file-upload/ng-file-upload.min.js'
 			]
 		},
 		css: [

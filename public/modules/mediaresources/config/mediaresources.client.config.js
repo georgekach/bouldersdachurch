@@ -4,8 +4,8 @@
 angular.module('mediaresources').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('topbar', 'Mediaresources', 'mediaresources', 'dropdown', '/mediaresources(/create)?');
-		Menus.addSubMenuItem('topbar', 'mediaresources', 'List Mediaresources', 'mediaresources');
-		Menus.addSubMenuItem('topbar', 'mediaresources', 'New Mediaresource', 'mediaresources/create');
+		Menus.addMenuItem('top-admin', 'Media Resources', 'mediaresources', 'dropdown', '/mediaresources(/create)?');
+		Menus.addSubMenuItem('top-admin', 'mediaresources', 'List Media Resources', 'mediaresources');
+		Menus.addSubMenuItem('top-admin', 'mediaresources', 'New Media Resource', 'mediaresources/create');
 	}
 ]);
